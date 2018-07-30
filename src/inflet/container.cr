@@ -4,4 +4,10 @@ module Inflet::Container
       {{yield}}
     end
   end
+
+  macro included
+    def self.resolve(type)
+      type.new
+    end
+  end
 end

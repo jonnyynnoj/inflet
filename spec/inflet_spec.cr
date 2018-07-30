@@ -4,8 +4,12 @@ describe Inflet do
   describe Inflet::Container do
     it "should resolve a bound service" do
       boundService = Container.resolve(BoundService)
-
       boundService.prop.should eq "test"
+    end
+
+    it "should resolve a new instance if not bound" do
+      foo = Container.resolve(Foo)
+      foo.should be_a Foo
     end
   end
 

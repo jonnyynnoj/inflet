@@ -18,13 +18,11 @@ end
 
 class AutowiredService
   include Inflet::Autowire(Container)
-  getter foo
-  getter bound_service
+  getter foo, bound_service
 
   def initialize(@foo : Foo, @bound_service : BoundService)
   end
 end
 
 class Foo
-  include Inflet::Autowire(Container)
 end
