@@ -1,4 +1,4 @@
-# container
+# Inflet
 
 Inflet is a dependency injection container for [Crystal](https://github.com/crystal-lang/crystal)
 
